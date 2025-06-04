@@ -1,0 +1,37 @@
+[project]
+name = "project-template"
+version = "0.1.0"
+description = "Default template for a Python project"
+authors = []
+dependencies = []
+requires-python = ">=3.12"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.11.12",
+    "pre-commit>=4.2.0",
+    "pytest>=8.4.0",
+    "pytest-cov>=6.1.1",
+    "pytest-randomly>=3.16.0",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "I",  # Import sorting
+    "INP",  # No folders containing python files without also having __init__.py
+]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/**/*.py" = ["INP"]  # The scripts folder don't need a __init__.py file
+
+[tool.pdm]
+distribution = true
