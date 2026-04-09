@@ -4,7 +4,7 @@ This is a dummy readme for a Python project managed by [PDM](https://pdm-project
 It works with PDM, so if you want to create a new project, then you can simply run
 
 ```bash
-pdm init https://github.com/marieroald/python-project-template
+pdm init https://github.com/marieroald/project-template
 ```
 
 If you don't have PDM installed, then you can follow the [installation instructions](https://pdm-project.org/en/latest/#installation) in the PDM documentation.
